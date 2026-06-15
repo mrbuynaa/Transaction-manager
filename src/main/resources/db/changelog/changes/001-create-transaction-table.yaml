@@ -1,0 +1,63 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-transaction-sequence
+      author: buynaa
+      changes:
+        - createSequence:
+            sequenceName: TRANSACTION_SEQ
+            startValue: 1
+            incrementBy: 1
+
+  - changeSet:
+      id: 001-create-transaction-table
+      author: buynaa
+      changes:
+        - createTable:
+            tableName: TRANSACTION
+            columns:
+              - column:
+                  name: ID
+                  type: NUMBER(19)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: INSTRUMENT_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: BUY_ORDER_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: SELL_ORDER_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: CREATED_DATE
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: AMOUNT
+                  type: NUMBER(18, 8)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PRICE
+                  type: NUMBER(18, 8)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: BUY_USER_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: SELL_USER_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
