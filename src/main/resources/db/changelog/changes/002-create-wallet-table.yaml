@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-create-wallet-sequence
+      author: buynaa
+      changes:
+        - createSequence:
+            sequenceName: WALLET_SEQ
+            startValue: 1
+            incrementBy: 1
+
+  - changeSet:
+      id: 002-create-wallet-table
+      author: buynaa
+      changes:
+        - createTable:
+            tableName: WALLET
+            columns:
+              - column:
+                  name: ID
+                  type: NUMBER(19)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: USER_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: INSTRUMENT_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: BALANCE
+                  type: NUMBER(18, 8)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LOCKED_BALANCE
+                  type: NUMBER(18, 8)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: STATUS
+                  type: VARCHAR2(10)
+                  constraints:
+                    nullable: false
