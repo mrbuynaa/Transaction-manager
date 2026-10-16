@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 011-create-account-table
+      author: buynaa
+      changes:
+        - createTable:
+            tableName: ACCOUNT
+            columns:
+              - column:
+                  name: ID
+                  type: NUMBER(19)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: OWNER_ID
+                  type: NUMBER(19)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: STATUS
+                  type: VARCHAR2(10)
+                  constraints:
+                    nullable: false
