@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 010-add-holding-account-instrument-unique-constraint
+      author: buynaa
+      changes:
+        - addUniqueConstraint:
+            tableName: HOLDING
+            columnNames: ACCOUNT_ID, INSTRUMENT_ID
+            constraintName: UK_HOLDING_ACCOUNT_INSTRUMENT

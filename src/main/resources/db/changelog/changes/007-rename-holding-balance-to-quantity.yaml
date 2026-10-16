@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007-rename-holding-balance-to-quantity
+      author: buynaa
+      changes:
+        - renameColumn:
+            tableName: HOLDING
+            oldColumnName: BALANCE
+            newColumnName: QUANTITY
+            columnDataType: NUMBER(18, 8)
+        - modifyDataType:
+            tableName: HOLDING
+            columnName: QUANTITY
+            newDataType: NUMBER(24, 8)

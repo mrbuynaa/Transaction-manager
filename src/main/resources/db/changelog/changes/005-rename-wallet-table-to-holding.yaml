@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-rename-wallet-sequence-to-holding
+      author: buynaa
+      changes:
+        - renameSequence:
+            oldSequenceName: WALLET_SEQ
+            newSequenceName: HOLDING_SEQ
+
+  - changeSet:
+      id: 005-rename-wallet-table-to-holding
+      author: buynaa
+      changes:
+        - renameTable:
+            oldTableName: WALLET
+            newTableName: HOLDING

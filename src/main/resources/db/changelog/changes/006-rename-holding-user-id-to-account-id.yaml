@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-rename-holding-user-id-to-account-id
+      author: buynaa
+      changes:
+        - renameColumn:
+            tableName: HOLDING
+            oldColumnName: USER_ID
+            newColumnName: ACCOUNT_ID
+            columnDataType: NUMBER(19)

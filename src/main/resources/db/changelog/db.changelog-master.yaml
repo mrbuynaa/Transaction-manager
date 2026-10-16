@@ -3,3 +3,19 @@ databaseChangeLog:
       file: db/changelog/changes/001-create-transaction-table.yaml
   - include:
       file: db/changelog/changes/002-create-wallet-table.yaml
+  - include:
+      file: db/changelog/changes/003-add-wallet-available-balance.yaml
+  - include:
+      file: db/changelog/changes/004-rename-wallet-locked-balance-to-hold-amount.yaml
+  - include:
+      file: db/changelog/changes/005-rename-wallet-table-to-holding.yaml
+  - include:
+      file: db/changelog/changes/006-rename-holding-user-id-to-account-id.yaml
+  - include:
+      file: db/changelog/changes/007-rename-holding-balance-to-quantity.yaml
+  - include:
+      file: db/changelog/changes/008-rename-holding-hold-amount-to-hold-quantity.yaml
+  - include:
+      file: db/changelog/changes/009-drop-holding-available-balance.yaml
+  - include:
+      file: db/changelog/changes/010-add-holding-account-instrument-unique-constraint.yaml

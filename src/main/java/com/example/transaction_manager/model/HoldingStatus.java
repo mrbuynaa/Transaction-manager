@@ -1,6 +1,6 @@
 package com.example.transaction_manager.model;
 
-public enum WalletStatus {
+public enum HoldingStatus {
     ACTIVE,
     FROZEN,
     CLOSED

@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-add-wallet-available-balance
+      author: buynaa
+      changes:
+        - addColumn:
+            tableName: WALLET
+            columns:
+              - column:
+                  name: AVAILABLE_BALANCE
+                  type: NUMBER(18, 8)
+        - sql:
+            sql: UPDATE WALLET SET AVAILABLE_BALANCE = BALANCE - LOCKED_BALANCE
+        - addNotNullConstraint:
+            tableName: WALLET
+            columnName: AVAILABLE_BALANCE
+            columnDataType: NUMBER(18, 8)

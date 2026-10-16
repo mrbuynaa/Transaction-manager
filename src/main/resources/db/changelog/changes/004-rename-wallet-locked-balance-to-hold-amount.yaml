@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-rename-wallet-locked-balance-to-hold-amount
+      author: buynaa
+      changes:
+        - renameColumn:
+            tableName: WALLET
+            oldColumnName: LOCKED_BALANCE
+            newColumnName: HOLD_AMOUNT
+            columnDataType: NUMBER(18, 8)

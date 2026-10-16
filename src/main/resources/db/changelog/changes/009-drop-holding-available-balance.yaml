@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 009-drop-holding-available-balance
+      author: buynaa
+      changes:
+        - dropColumn:
+            tableName: HOLDING
+            columnName: AVAILABLE_BALANCE

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008-rename-holding-hold-amount-to-hold-quantity
+      author: buynaa
+      changes:
+        - renameColumn:
+            tableName: HOLDING
+            oldColumnName: HOLD_AMOUNT
+            newColumnName: HOLD_QUANTITY
+            columnDataType: NUMBER(18, 8)
+        - modifyDataType:
+            tableName: HOLDING
+            columnName: HOLD_QUANTITY
+            newDataType: NUMBER(24, 8)
